@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Visa Stopover Form",
+  "version": "2.0",
+  "description": "Preencher automaticamente formulários com múltiplos perfis",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
